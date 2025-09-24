@@ -1,12 +1,10 @@
+import SampleTooltip from "./components/Tooltip/SampleTooltip"
 
 function App() {
 
   return (
     <>
-     
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
+      {SampleTooltip}
     </>
   )
 }
