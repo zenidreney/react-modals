@@ -1,4 +1,5 @@
 
+import type { JSX } from "react";
 import "./Tooltip.css"
 import { ImDrawer2 } from "react-icons/im";
 
@@ -11,14 +12,16 @@ const colorSchemes = {
 }
 
 type TooltipProps = {
-  children?: string;
+  children?: JSX.Element;
+  text?: string;
   variant?: keyof typeof colorSchemes;
   light?: boolean;
   header?: string;
 }
 
 const defaultValues: TooltipProps = {
-  children: "Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.",
+  children: <button>Hover Me!</button>,
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.",
   variant: "grey",
   light: false,
   header: "Archive Notes"
@@ -27,6 +30,7 @@ const defaultValues: TooltipProps = {
 
 function Tooltip({
   children = defaultValues.children,
+  text = defaultValues.text,
   variant = defaultValues.variant,
   light = defaultValues.light,
   header = defaultValues.header
@@ -40,18 +44,20 @@ function Tooltip({
 
 
   return (
-    <div className="tooltip-fbox" style={styles as React.CSSProperties}  >
-
-      <ImDrawer2 className="icon" />
-      <div className="tooltip-text-fbox">
-        <h3 >
-          {header}
-        </h3>
-        <p >
-          {children}
-        </p>
+    <div className="tooltip-trigger">
+      <div className="tooltip-fbox" style={styles as React.CSSProperties}  >
+        <ImDrawer2 className="icon" />
+        <div className="tooltip-text-fbox">
+          <h3 >
+            {header}
+          </h3>
+          <p >
+            {text}
+          </p>
+        </div>
+        <button className="tooltip-btn">X</button>
       </div>
-      <button className="tooltip-btn">X</button>
+      {children}
     </div>
   )
 }

@@ -9,8 +9,9 @@ div.tooltip-fbox {
     --tooltip-bg: #262626;
     --text-color: #c7c7c7;
 
+  
     position: relative;
-    display: flex;
+    display: none;
     gap: 1em;
     justify-content: baseline;
     align-items: start;
@@ -32,6 +33,10 @@ div.tooltip-fbox {
     box-shadow: 0px 4px 6px -2px #0000000D;
     box-shadow: 10px 10px 15px -3px #0000001A;
 
+}
+
+div.tooltip-trigger:hover .tooltip-fbox {
+    display: flex;
 }
 
 div.tooltip-fbox::after {
