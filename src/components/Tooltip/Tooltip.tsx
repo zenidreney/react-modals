@@ -1,5 +1,5 @@
 
-import type { JSX } from "react";
+import { useState, type JSX } from "react";
 import "./Tooltip.css"
 import { ImDrawer2 } from "react-icons/im";
 
@@ -20,7 +20,7 @@ type TooltipProps = {
 }
 
 const defaultValues: TooltipProps = {
-  children: <button>Hover Me!</button>,
+  children: <button className="sample-btn">Click or Hover Me!</button>,
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.",
   variant: "grey",
   light: false,
@@ -36,6 +36,8 @@ function Tooltip({
   header = defaultValues.header
 }: TooltipProps) {
 
+  const [isVisible, setIsVisible] = useState(false)
+
   const scheme = colorSchemes[variant || "grey"] || colorSchemes.grey
 
   const styles = light ?
@@ -44,19 +46,29 @@ function Tooltip({
 
 
   return (
-    <div className="tooltip-trigger">
-      <div className="tooltip-fbox" style={styles as React.CSSProperties}  >
-        <ImDrawer2 className="icon" />
-        <div className="tooltip-text-fbox">
-          <h3 >
-            {header}
-          </h3>
-          <p >
-            {text}
-          </p>
-        </div>
-        <button className="tooltip-btn">X</button>
-      </div>
+    <div className="tooltip-trigger"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+      onClick={(prev) => !prev}>
+      {isVisible &&
+        <div className="tooltip-fbox" style={styles as React.CSSProperties}  >
+          <ImDrawer2 className="icon" />
+          <div className="tooltip-text-fbox">
+            <h3 >
+              {header}
+            </h3>
+
+            <p >
+              {text}
+            </p>
+          </div>
+
+          <button
+            onClick={(e) => {e.stopPropagation(); setIsVisible(false)}}
+            className="tooltip-btn">
+            X
+          </button>
+        </div>}
       {children}
     </div>
   )
