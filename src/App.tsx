@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>React Modals</h1>
+      <h1>React Modals ++</h1>
 
       <section>
 <h2>Tooltip Component</h2>
