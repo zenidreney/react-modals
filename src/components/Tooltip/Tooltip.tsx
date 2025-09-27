@@ -1,5 +1,6 @@
 
-import { useState, type JSX } from "react";
+import { useState } from "react";
+import type { JSX, CSSProperties } from "react";
 import "./Tooltip.css"
 import { ImDrawer2 } from "react-icons/im";
 
@@ -51,7 +52,8 @@ function Tooltip({
       onMouseLeave={() => setIsVisible(false)}
       onClick={(prev) => !prev}>
       {isVisible &&
-        <div className="tooltip-fbox" style={styles as React.CSSProperties}  >
+
+        <div className="tooltip-fbox" style={ styles as CSSProperties }  >
           <ImDrawer2 className="icon" />
           <div className="tooltip-text-fbox">
             <h3 >
@@ -64,11 +66,12 @@ function Tooltip({
           </div>
 
           <button
-            onClick={(e) => {e.stopPropagation(); setIsVisible(false)}}
+            onClick={(e) => { e.stopPropagation(); setIsVisible(false) }}
             className="tooltip-btn">
             X
           </button>
         </div>}
+
       {children}
     </div>
   )

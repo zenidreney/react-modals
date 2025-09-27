@@ -5,7 +5,10 @@ import type { CSSProperties } from "react"
 const styles: CSSProperties = {
     display: "flex",
     flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: "150px"
+
 }
 
 const SampleTooltip =

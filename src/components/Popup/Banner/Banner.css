@@ -1,0 +1,80 @@
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+div.banner-container {
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 384px;
+    width: 90%;
+    min-height: 3.25em;
+    gap: 0.75em;
+    margin-bottom: 0.125em;
+    opacity: 1;
+    border-radius: 6px;
+    padding: 1em;
+}
+
+div.banner-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+div.banner-container .banner-header-row:nth-of-type(2) svg {
+    opacity: 0;
+    flex: 0 0 1rem;
+}
+
+h2.banner-header {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+div.banner-container p {
+
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 20px;
+    letter-spacing: 0%;
+
+}
+
+div.banner-success {
+    background-color: #ECFDF5;
+    color: #065F46;
+}
+
+div.banner-warning {
+    color: #92400E;
+    background-color: #FFFBEB;
+}
+
+div.banner-warning .warning-icon {
+    color: #FBBF24;
+}
+
+div.banner-error {
+    color: #92400E;
+    background-color: #FEF2F2;
+}
+
+div.banner-error h2 {
+    font-weight: 700;
+}
+
+div.banner-error .error-icon {
+    color: #F87171;
+}
+
+div.banner-neutral {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+}
