@@ -13,12 +13,14 @@ body {
 }
 
 div.app-container {
+    max-width: 720px;
     font-family: "permanent marker", "cursive";
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.8em;
+    margin: 0 auto;
 }
 
 div.app-container  h2 {
