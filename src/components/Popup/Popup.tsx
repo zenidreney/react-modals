@@ -1,4 +1,5 @@
 import { useState, useEffect, cloneElement } from "react"
+import { createPortal } from "react-dom"
 import Banner from "./Banner/Banner"
 import type { BannerProps } from "./Banner/Banner"
 
@@ -16,8 +17,7 @@ function Popup({
 
     useEffect(() => {
         if (isOpen) {
-            const timer = setTimeout(() => { setIsOpen(false) }, 4000)
-            console.log("clicked")
+            const timer = setTimeout(() => { setIsOpen(false) }, 3000)
             return () => clearTimeout(timer)
         }
     }, [isOpen])
@@ -29,11 +29,17 @@ function Popup({
     return (
 
         <>
-            {isOpen && <Banner
-                text={text}
-                heading={heading}
-                variant={variant}
-            />}
+            {
+            createPortal(isOpen && 
+            <div className="popup-container">
+                <Banner
+                    text={text}
+                    heading={heading}
+                    variant={variant}
+                />
+            </div>,
+        document.body)
+            }
             {modalTrigger}
         </>
 

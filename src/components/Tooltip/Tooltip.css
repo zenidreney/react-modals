@@ -34,8 +34,7 @@ div.tooltip-fbox {
     font-weight: 400;
     font-size: 0.825rem;
     line-height: 20px;
-    width: fit-content;
-    min-width: 300px;
+    width: 115%;
     max-width: 384px;
 
     background-color: var(--tooltip-bg);
@@ -105,4 +104,10 @@ button.sample-btn {
     border-radius: 30px;
     cursor: pointer;
     
+}
+
+@media(min-width: 450px) {
+    div.tooltip-fbox {
+        min-width: 300px;
+    }
 }

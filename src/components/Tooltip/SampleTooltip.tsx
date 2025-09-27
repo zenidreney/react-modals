@@ -7,7 +7,7 @@ const styles: CSSProperties = {
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "150px"
+    marginTop: "10px"
 
 }
 
@@ -22,21 +22,22 @@ const SampleTooltip =
 
         <Tooltip
             light
-            header="Some Header"
-            text="Add some text to keep it up" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
+            header="Always Trust"
+            text="Add some text to keep it up. Let the insipiration fill you." ><button className="sample-btn">Click or Hover me!</button></Tooltip>
 
         <Tooltip
             variant="blue"
             light
-            header="Some Header" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
+            header="You Can Change" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
         <Tooltip
             variant="pink"
             light
-            header="Some Header" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
+            header="Keep Working" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
         <Tooltip
             variant="green"
             light
-            header="Some Header" ><button className="sample-btn">Click or Hover me!</button></Tooltip>
+            header="Stay Joyful"
+            text="Add some text to keep it up. Let the insipiration fill you." ><button className="sample-btn">Click or Hover me!</button></Tooltip>
 
     </div>
 
