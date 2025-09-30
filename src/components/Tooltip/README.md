@@ -19,7 +19,7 @@ This repository contains a **reusable React Tooltip component** that displays ad
 ### Clone this repo into your portfolio or project:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/zenidreney/react-modals.git
 ```
 ### Make sure you have the following dependencies installed:
 ```bash
@@ -71,9 +71,12 @@ Basic styles are defined in Tooltip.css. You can customize them or extend with y
 📂 File Structure
 ```
 src/
-  ├── Tooltip.tsx       # Main tooltip component
-  ├── Tooltip.css       # Tooltip styles
-  └── ...
+  └── components/
+      └── Tooltip/
+          ├── Tooltip.tsx     # Main tooltip component
+          ├── Tooltip.css     # Tooltip styles
+          └── README.md       # Documentation for Tooltip
+
 ```
 ## 📝 License
 This project is for portfolio/demo purposes with a MIT License. Feel free to use, modify, and showcase it in your own work!
