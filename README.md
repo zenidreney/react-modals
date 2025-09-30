@@ -49,4 +49,7 @@ src/
           ├── Tooltip.tsx     # Main tooltip component
           ├── Tooltip.css
           └── README.md       # Documentation for Tooltip
-
+```
+## 📝 License
+This project is for portfolio/demo purposes with a MIT License.
+Feel free to use, modify, and showcase it in your own work!
