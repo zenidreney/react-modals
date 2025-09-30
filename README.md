@@ -10,6 +10,12 @@ Currently includes:
 
 ---
 
+## 🛠 Tech Stack
+- [React](https://react.dev/) with TypeScript
+- [Vite](https://vitejs.dev/) for fast dev server and build tooling
+- [React Icons](https://react-icons.github.io/react-icons/) for icons
+
+
 ## 📦 Installation
 
 Clone this repo:
