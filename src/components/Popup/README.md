@@ -18,7 +18,7 @@ This repository contains a **reusable React Popup component** that displays a ba
 Clone this repo into your portfolio or project:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/zenidreney/react-modals.git
 
 ```
 Make sure you have the following dependencies installed:
@@ -75,11 +75,15 @@ Basic styles are defined in Popup.css. You can customize them or extend with you
 ## 📂 File Structure
 ```
 src/
-  ├── Popup.tsx        # Main popup component
-  ├── Popup.css        # Popup styles
-  └── Banner/
-       ├── Banner.tsx  # Banner component (used inside Popup)
-       └── ...
+  └── components/
+      └── Popup/
+          ├── Popup.tsx        # Main popup component
+          ├── Popup.css        # Popup styles
+          ├── README.md        # Documentation for Popup
+          └── Banner/
+              ├── Banner.tsx   # Banner component (used inside Popup)
+              └── Banner.css   # Banner styles
+
 ```
 
 This project is for portfolio/demo purposes with a MIT License.
