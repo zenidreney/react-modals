@@ -5,8 +5,8 @@ This repo is designed for **portfolio/demo purposes** to showcase component arch
 
 Currently includes:
 
-- 🎉 [Popup Component](./src/Popup.md) – A lightweight popup notification with banner content.  
-- 💡 [Tooltip Component](./src/Tooltip.md) – A customizable tooltip with multiple color schemes and modes.  
+- 🎉 [Popup Component](./src/components/Popup/README.md) – A lightweight popup notification with banner content.  
+- 💡 [Tooltip Component](./src/components/Tooltip/README.md) – A customizable tooltip with multiple color schemes and modes.  
 
 ---
 
@@ -36,10 +36,17 @@ Then open http://localhost:5173
 📂 File Structure
 ```bash
 src/
-  ├── Popup.tsx          # Popup component
-  ├── Popup.css
-  ├── Popup.md           # Documentation for Popup
-  ├── Tooltip.tsx        # Tooltip component
-  ├── Tooltip.css
-  ├── Tooltip.md         # Documentation for Tooltip
-  └── Banner/            # Shared banner component used in Popup
+  └── components/
+      ├── Popup/
+      │   ├── Popup.tsx       # Main popup component
+      │   ├── Popup.css
+      │   ├── README.md       # Documentation for Popup
+      │   └── Banner/
+      │       ├── Banner.tsx  # Banner component (used inside Popup)
+      │       └── Banner.css
+      │
+      └── Tooltip/
+          ├── Tooltip.tsx     # Main tooltip component
+          ├── Tooltip.css
+          └── README.md       # Documentation for Tooltip
+
