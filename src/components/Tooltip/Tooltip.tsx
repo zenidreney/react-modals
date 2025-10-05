@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import type { JSX, CSSProperties } from "react";
+import type { ReactNode, CSSProperties } from "react";
 import "./Tooltip.css"
 import { ImDrawer2 } from "react-icons/im";
 
@@ -13,7 +13,7 @@ const colorSchemes = {
 }
 
 type TooltipProps = {
-  children?: JSX.Element;
+  children?: ReactNode;
   text?: string;
   variant?: keyof typeof colorSchemes;
   light?: boolean;
